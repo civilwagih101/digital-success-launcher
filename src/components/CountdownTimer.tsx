@@ -33,29 +33,29 @@ const CountdownTimer = () => {
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="bg-white border-2 border-red-600 rounded-md p-4 min-w-[70px] shadow-lg">
-        <span className="text-red-600 text-4xl font-bold">
+      <div className="bg-white border-2 border-red-600 rounded-md p-3 min-w-[60px] shadow-md">
+        <span className="text-red-600 text-2xl font-bold">
           {String(value).padStart(2, "0")}
         </span>
       </div>
-      <div className="text-gray-600 text-sm mt-2 font-medium uppercase tracking-wider">
+      <div className="text-gray-600 text-xs mt-1.5 font-medium uppercase tracking-wider">
         {label}
       </div>
     </div>
   );
 
   return (
-    <div className="bg-red-50/80 p-8 rounded-2xl shadow-lg mb-8 animate-fade-in">
-      <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
+    <div className="bg-red-50/80 p-6 rounded-2xl shadow-lg mb-8 animate-fade-in">
+      <h2 className="text-xl md:text-2xl font-bold mb-6 text-gray-900">
         ⌛ Limited Time Offer! Download the Course Before Time Runs Out!
       </h2>
-      <div className="flex justify-center items-center gap-4">
+      <div className="flex justify-center items-center gap-3">
         <TimeBox value={timeLeft.days} label="Days" />
-        <div className="text-red-600 text-4xl font-bold mb-8">:</div>
+        <div className="text-red-600 text-2xl font-bold mb-6">:</div>
         <TimeBox value={timeLeft.hours} label="Hours" />
-        <div className="text-red-600 text-4xl font-bold mb-8">:</div>
+        <div className="text-red-600 text-2xl font-bold mb-6">:</div>
         <TimeBox value={timeLeft.minutes} label="Minutes" />
-        <div className="text-red-600 text-4xl font-bold mb-8">:</div>
+        <div className="text-red-600 text-2xl font-bold mb-6">:</div>
         <TimeBox value={timeLeft.seconds} label="Seconds" />
       </div>
     </div>
